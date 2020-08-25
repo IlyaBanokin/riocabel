@@ -1,0 +1,10 @@
+@font-face {
+  font-family: 'PTSansPro-Demi';
+  src: url('PTSansPro-Demi.eot');
+  src: url('PTSansPro-Demi.woff') format('woff'),
+       url('PTSansPro-Demi.ttf') format('truetype'),
+       url('PTSansPro-Demi.svg#PTSansPro-Demi') format('svg'),
+       url('PTSansPro-Demi.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}

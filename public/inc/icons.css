@@ -1,0 +1,244 @@
+.myicon:before{
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    background: url("/img/new/icons.png") no-repeat;
+}
+
+.myicon.myicon__schedule:before{
+    width: 19px;
+    height: 19px;
+    background-position: -10px -10px;
+}
+
+.myicon.myicon__map-marker:before{
+    width: 13px;
+    height: 19px;
+    background-position: -43px -10px;
+}
+
+.myicon.myicon__search:before{
+    width: 14px;
+    height: 13px;
+    background-position: -147px -10px;
+}
+
+.myicon.myicon__basket:before{
+    width: 26px;
+    height: 26px;
+    background-position: -70px -10px;
+}
+
+.myicon.myicon__signin:before{
+    width: 23px;
+    height: 26px;
+    background-position: -110px -10px;
+}
+
+.myicon.myicon__email:before{
+    width: 20px;
+    height: 14px;
+    background-position: -176px -10px;
+}
+
+.myicon.myicon__callback:before{
+    width: 22px;
+    height: 22px;
+    background-position: -210px -10px;
+}
+
+
+
+.wicon:before{
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    background: url("/img/new/wicons.png") no-repeat;
+}
+
+.wicon.wicon__delivery:before{
+    width: 65px;
+    height: 66px;
+
+    background-position: 0px 0px;
+}
+
+.wicon.wicon__phone:before{
+    width: 65px;
+    height: 66px;
+
+    background-position: -79px 0px;
+}
+
+
+.wicon.wicon__google:before{
+    width: 36px;
+    height: 36px;
+    background-position: 0px -80px;
+}
+
+.wicon.wicon__tw:before{
+    width: 36px;
+    height: 36px;
+    background-position: -49px -80px;
+}
+
+.wicon.wicon__mail:before{
+    width: 36px;
+    height: 36px;
+    background-position: -99px -80px;
+}
+
+.wicon.wicon__fb:before{
+    width: 36px;
+    height: 36px;
+    background-position: -148px -80px;
+}
+
+.wicon.wicon__rss:before{
+    width: 36px;
+    height: 36px;
+    background-position: -197px -80px;
+}
+
+.wicon.wicon__vk:before{
+    width: 36px;
+    height: 36px;
+    background-position: 0px -128px;
+}
+
+.wicon.wicon__a:before{
+    width: 36px;
+    height: 36px;
+    background-position: -49px -128px;
+}
+
+.wicon.wicon__ya:before{
+    width: 36px;
+    height: 36px;
+    background-position: -99px -128px;
+}
+
+.wicon.wicon__ok:before{
+    width: 36px;
+    height: 36px;
+    background-position: -49px -128px;
+}
+
+.wicon.wicon__pencil:before{
+    width: 36px;
+    height: 36px;
+    background-position: -148px -128px;
+}
+
+.wicon.wicon__ok:before{
+    width: 36px;
+    height: 36px;
+    background-position: -197px -128px;
+}
+
+
+
+.wicon.wicon__visa:before{
+    width: 52px;
+    height: 32px;
+    background-position: -247px -80px;
+}
+
+.wicon.wicon__master-card:before{
+    width: 52px;
+    height: 32px;
+    background-position: -309px -80px;
+}
+
+.wicon.wicon__maestro:before{
+    width: 52px;
+    height: 32px;
+    background-position: -370px -80px;
+}
+
+.wicon.wicon__wm:before{
+    width: 52px;
+    height: 32px;
+    background-position: -431px -80px;
+}
+
+.wicon.wicon__pay-pal:before{
+    width: 52px;
+    height: 32px;
+    background-position: -247px -120px;
+}
+
+.wicon.wicon__liqpay:before{
+    width: 52px;
+    height: 32px;
+    background-position: -309px -120px;
+}
+
+.wicon.wicon__yad:before{
+    width: 52px;
+    height: 32px;
+    background-position: -370px -120px;
+}
+
+.wicon.wicon__contact:before{
+    width: 52px;
+    height: 32px;
+    background-position: -431px -120px;
+}
+
+.wicon.wicon__qiwi:before{
+    width: 52px;
+    height: 32px;
+    background-position: -247px -161px;
+}
+
+.wicon.wicon__sms:before{
+    width: 52px;
+    height: 32px;
+    background-position: -309px -161px;
+}
+
+.wicon.wicon__pochta-rf:before{
+    width: 52px;
+    height: 32px;
+    background-position: -370px -161px;
+}
+
+.wicon.wicon__rbk:before{
+    width: 52px;
+    height: 32px;
+    background-position: -431px -161px;
+}
+
+
+.wicon.wicon__email:before{
+    width: 24px;
+    height: 15px;
+
+    background-position: -235px -2px;
+}
+
+
+.wicon.wicon__location:before{
+    width: 28px;
+    height: 37px;
+
+    background-position: -158px -1px;
+}
+
+.wicon.wicon__phone-white:before{
+    width: 18px;
+    height: 52px;
+
+    background-position: -200px -1px;
+}
+                                                                                                                                                                                                            <li><a href="#" class="wicon wicon__liqpay"></a></li>
+                                                                                                                                                                                                                                                                                                             <li><a href="#" class="wicon wicon__yad"></a></li>
+                                                                                                                                                                                                                                                                                                                                                            <li><a href="#" class="wicon wicon__contact"></a></li>
+                                                                                                                                                                                                                                                                                                                                                                                                               <li><a href="#" class="wicon wicon__sms"></a></li>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                              <li><a href="#" class="wicon wicon__pochta-rf"></a></li>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   <li><a href="#" class="wicon wicon__rbk"></a></li>
+
+
+
