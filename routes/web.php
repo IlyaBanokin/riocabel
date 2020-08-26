@@ -20,4 +20,7 @@ Route::group(['namespace' => 'Shop'], function () {
     Route::resource('/', 'MainController')
         ->names('shop.main')
         ->only($methods);
+
+    Route::get('/search/result', ['uses' => 'SearchController@index', 'as' => 'search.result']);
+    Route::get('/autocomplete', ['uses' => 'SearchController@search', 'as' => 'products.search']);
 });

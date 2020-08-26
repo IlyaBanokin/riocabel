@@ -33,6 +33,7 @@
     @yield('navigation')
 </header>
 <section class="site-content">
+    @yield('content')
     @yield('slider')
     @yield('hit')
     @yield('categories')
@@ -50,6 +51,17 @@
 <script src="/inc/js/slick.min.js"></script>
 <script src="/inc/js/main.js"></script>
 <script src="/inc/js/base-template.js"></script>
-<script src="js/menu.js"></script>
+<script src="/js/menu.js"></script>
+<script src="/js/typeahead.bundle.js"></script>
+<script type="text/javascript">
+    var route = "{{ route('products.search') }}";
+    $('#search').typeahead({
+        source: function (term, process) {
+            return $.get(route, {term: term}, function (data) {
+                return process(data);
+            });
+        }
+    });
+</script>
 </body>
 </html>

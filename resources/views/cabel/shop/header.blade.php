@@ -8,12 +8,16 @@
                 class="site-header__region__caption site-header__hlight">Ваш регион: </span><span
                 class="site-header__region__name" id="user-city"></span></a>
         <div class="site-header__top__block site-header__search">
-            <form method="post" action="/" class="site-header__search__form"><input
-                    class="site-header__search__input" type="text" name="search" value=""
-                    placeholder="Поиск...">
+
+
+            <form method="GET" action="{{ route('search.result') }}" class="site-header__search__form form"
+                  autocomplete="off">
+                <input class="site-header__search__input" type="text" id="search" name="search" placeholder="Поиск...">
                 <button class="site-header__search__btn myicon myicon__search" type="submit"></button>
             </form>
         </div>
+
+
         <a href="#"
            class="site-header__top__block site-header__basket basket-marker"><span
                 class="site-header__basket__caption">Товара</span><span
@@ -36,7 +40,8 @@
         </div>
         <div class="site-header__middle__block site-header__contacts">
             <div class="site-header__email"><img src="img/new/icons/mail.svg" alt="">info@riokabel.ru</div>
-            <div class="site-header__phone"><span class="city">СПб:</span><span class="phone-number">+7 (000) 000-00-00</span>
+            <div class="site-header__phone"><span class="city">СПб:</span><span
+                    class="phone-number">+7 (000) 000-00-00</span>
             </div>
             <!-- <div class="site-header__phone"><span class="city">Мск.:</span><span class="phone-number">+7 (499) 000-00-00</span>
             </div>

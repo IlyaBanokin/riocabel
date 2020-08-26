@@ -7,25 +7,25 @@
                 <div class="products-list__inner">
                     @foreach($hitProducts as $product)
                         <div class="products-list__item">
-                            <div class="products-list__item__header">{{ $product->title }} {{ $product->id }}</div>
+                            <div class="products-list__item__header">{{ $product->title }}</div>
                             <div class="products-list__item__img"><img src="/inc/product.png" alt="{{ $product->title }} купить недорого"></div>
                             <div class="products-list__item__price-old">Статус: <span>Есть на складе</span></div>
                             <div class="products-list__basket-btn-wrap">
                                 <button class="products-list__basket-btn"><span>В корзину</span></button>
                             </div>
-                            <div class="products-list__one-click-wrap"><a href="/product.php"
+                            <div class="products-list__one-click-wrap"><a href="{{ $product->slug }}"
                                                                           class="products-list__one-click">Подробнее</a></div>
                         </div>
                     @endforeach
                         @foreach($hitProductsHidden as $product)
                             <div class="products-list__item hit_block" style="display: none;">
-                                <div class="products-list__item__header">{{ $product->title }} {{ $product->id }}</div>
+                                <div class="products-list__item__header">{{ $product->title }}</div>
                                 <div class="products-list__item__img"><img src="/inc/product.png" alt="{{ $product->title }} купить недорого"></div>
                                 <div class="products-list__item__price-old">Статус: <span>Есть на складе</span></div>
                                 <div class="products-list__basket-btn-wrap">
                                     <button class="products-list__basket-btn"><span>В корзину</span></button>
                                 </div>
-                                <div class="products-list__one-click-wrap"><a href="/product.php"
+                                <div class="products-list__one-click-wrap"><a href="{{ $product->slug }}"
                                                                               class="products-list__one-click">Подробнее</a></div>
                             </div>
                         @endforeach

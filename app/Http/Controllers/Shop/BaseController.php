@@ -51,6 +51,11 @@ abstract class BaseController extends Controller
     protected $slider_rep;
 
     /**
+     * Поиск.
+     */
+    protected $searchRepository;
+
+    /**
      * Конструктор.
      */
     public function __construct()
