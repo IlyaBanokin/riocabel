@@ -39,7 +39,7 @@
             </p>
         </div>
         <div class="site-header__middle__block site-header__contacts">
-            <div class="site-header__email"><img src="img/new/icons/mail.svg" alt="">info@riokabel.ru</div>
+            <div class="site-header__email"><img src="/img/new/icons/mail.svg" alt="">info@riokabel.ru</div>
             <div class="site-header__phone"><span class="city">СПб:</span><span
                     class="phone-number">+7 (000) 000-00-00</span>
             </div>

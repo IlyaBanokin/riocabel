@@ -17,13 +17,11 @@
             <div class="row">
                 <div class="three columns site-footer__middle__block"><h4><span>Разделы сайта</span></h4>
                     <ul class="site-footer__menu">
-                        @if($menu)
-                        @foreach($menu as $item)
-                            <li><a href="/{{ $item->path }}">{{ $item->title }}</a></li>
-                        @endforeach
-                        @else
-                            <li><a href="/">Главная</a></li>
-                            @endif
+                        @if($menu && count($menu) > 0)
+                            @foreach($menu as $item)
+                                <li><a href="/{{ $item->path }}">{{ $item->title }}</a></li>
+                            @endforeach
+                        @endif
                     </ul>
                 </div>
 

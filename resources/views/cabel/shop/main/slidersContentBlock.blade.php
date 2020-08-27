@@ -1,4 +1,4 @@
-@if($getSlide)
+@if($getSlide && count($getSlide) > 0)
     <div class="promo-block">
         <div class="container">
             <div class="row">

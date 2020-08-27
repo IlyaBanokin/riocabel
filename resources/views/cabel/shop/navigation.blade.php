@@ -1,4 +1,4 @@
-@if($menu)
+@if($menu && count($menu) > 0)
 <div class="site-header__bottom">
     <div class="container site-header__menu">
         <div class="site-header__burger">
@@ -15,10 +15,4 @@
         </ul>
     </div>
 </div>
-@else
-    <li class="active">
-        <a href="/">
-            Главная
-        </a>
-    </li>
 @endif
