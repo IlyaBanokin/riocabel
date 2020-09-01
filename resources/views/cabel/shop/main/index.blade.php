@@ -127,50 +127,7 @@
 @endsection
 
 @section('feedback')
-    <div class="reply__wrapper">
-        <div class="container"><h3><span>Напишите нам</span></h3>
-            <div class="reply-form">
-                <div class="reply__discount-msg"><p>Хотите получить скидку в <span>5%</span>? - оставьте заявку
-                        онлайн<br><br>
-                        и мы подготовим для Вас индивидуальное, выгодное предложение!</p></div>
-                <form method="post" action="/">
-                    <div class="row">
-                        <div class="four columns">
-                            <div class="reply-form__input-wrapper"><input type="text" placeholder="Ваше имя" value="">
-                            </div>
-                            <div class="reply-form__input-wrapper"><input type="text" placeholder="Ваше email" value="">
-                            </div>
-                            <div class="reply-form__input-wrapper"><input type="text" placeholder="Ваше телефон"
-                                                                          value=""></div>
-                        </div>
-                        <div class="four columns">
-                            <div class="reply-form__input-wrapper"><textarea
-                                    placeholder="Введите текст Вашего сообщения..."></textarea></div>
-                        </div>
-                        <div class="four columns">
-                            <div class="reply-form__input-wrapper">
-                                <div class="reply-form__file-input-wrapper"><input type="file" value=""></div>
-                                <div class="reply-form__hint">
-                                    Вы можете прикрепть файл не более 10 Мб,<br><br>
-                                    формата .jpg, .png. .doc. .exls, .pdf, .rar, .zip
-                                </div>
-                            </div>
-                            <div class="reply-form__submit-wrapper">
-                                <button type="submit" class="reply-form__submit-btn"><span>Отправить</span></button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="twelve columns">
-                            <div class="reply-form__hint tex"><span>*</span> Мы не распространяем Ваши данные третьим
-                                лицам и не используем Ваши конткты для различных рассылок и т.д.
-                            </div>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
+    {!! $feedbackContentBlock !!}
 @endsection
 
 @section('partners')

@@ -15,12 +15,12 @@ use Illuminate\Support\Facades\Route;
 
 /*Клиентская часть*/
 Route::group(['namespace' => 'Shop'], function () {
-    $methods = ['index'];
+    $methods = ['index', 'store'];
 
     Route::resource('/', 'MainController')
         ->names('shop.main')
         ->only($methods);
-
+    Route::post('/callback', ['uses' => 'MainController@callback', 'as' => 'shop.main.callback']);
     Route::get('/search/result', ['uses' => 'SearchController@index', 'as' => 'search.result']);
     Route::get('/autocomplete', ['uses' => 'SearchController@search', 'as' => 'products.search']);
 });

@@ -1,7 +1,7 @@
 <div class="site-header__top collapsed">
     <div class="container site-header__container">
         <div class="site-header__top__block site-header__schedule">
-            <img src="img/new/icons/clock.svg" alt="" style="height: 16px;">
+            <img src="/img/new/icons/clock.svg" alt="" style="height: 16px;">
             <p class="site-header__schedule__days site-header__hlight"> Пн.-Птн.:</p>
             <p class="site-header__schedule__time">с 09:00 до 18:00</p></div>
         <a href="/" class="site-header__top__block site-header__region map-marker"><span
@@ -47,9 +47,9 @@
             </div>
             <div class="site-header__phone"><span class="city">Мур.:</span><span class="phone-number">+7 (815) 000-00-00</span>
             </div> -->
-            <button class="site-header__callback phone-marker" onclick="jivo_api.open();">Вам
-                перезвонить?
-            </button>
+            <a class="popup-open"><button class="site-header__callback phone-marker">Вам перезвонить?</button></a>
         </div>
     </div>
 </div>
+
+
