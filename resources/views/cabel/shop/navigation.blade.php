@@ -6,7 +6,7 @@
         </div>
         <ul class="main-menu">
             @foreach($menu as $item)
-            <li class="{{ Request::is($item->path.'*') ? 'active' : '' }}">
+            <li class="{{ Request::is($item->path) ? 'active' : '' }}">
                 <a href="/{{ $item->path }}">
                     {{ $item->title }}
                 </a>

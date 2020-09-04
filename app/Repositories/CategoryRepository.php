@@ -28,4 +28,27 @@ class CategoryRepository extends CoreRepository
 
         return $result;
     }
+
+    public function getCatalog()
+    {
+        $column = ['id', 'title', 'slug'];
+
+        $result = $this->startConditions()
+            ->select($column)
+            ->where('parent_id', 0)
+            ->get();
+
+        return $result;
+    }
+
+    public function getCategory($slug)
+    {
+        $result = $this
+            ->startConditions()
+            ->select('id','excerpt')
+            ->where('slug', $slug)
+            ->first();
+
+        return $result;
+    }
 }

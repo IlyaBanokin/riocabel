@@ -24,8 +24,10 @@
     <link rel="stylesheet" href="/inc/icons.css" type="text/css">
     <link rel="stylesheet" href="/inc/slick.css" type="text/css">
     <link rel="stylesheet" href="/inc/slick-theme.css" type="text/css">
+    <link rel="stylesheet" href="/inc/bootstrap.min.css">
     <link rel="stylesheet" href="/inc/main.css" type="text/css">
     <link rel="stylesheet" href="/inc/my.css" type="text/css">
+
     <script src="//api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU" type="text/javascript"></script>
     <script src="/inc/js/geo.js" type="text/javascript"></script>
 </head>

@@ -16,10 +16,20 @@ use Illuminate\Support\Facades\Route;
 /*Клиентская часть*/
 Route::group(['namespace' => 'Shop'], function () {
     $methods = ['index', 'store'];
+    $methodsCategories = ['index', 'show'];
 
     Route::resource('/', 'MainController')
         ->names('shop.main')
         ->only($methods);
+
+    Route::resource('/catalog', 'CategoriesController', [
+        'parameters' => [
+            'catalog' => 'slug',
+        ]])
+        ->only($methodsCategories)
+        ->names('shop.categories');
+
+    //Route::get('/catalog/{alias}', ['uses' => 'CategoriesController@show', 'as' => 'product.info'])
     Route::post('/callback', ['uses' => 'MainController@callback', 'as' => 'shop.main.callback']);
     Route::get('/search/result', ['uses' => 'SearchController@index', 'as' => 'search.result']);
     Route::get('/autocomplete', ['uses' => 'SearchController@search', 'as' => 'products.search']);

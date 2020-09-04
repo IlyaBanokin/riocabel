@@ -46,4 +46,17 @@ class ProductRepository extends CoreRepository
 
         return $result;
     }
+
+    public function getProductsCategory($id)
+    {
+        $column = ['id', 'title', 'slug', 'category_id'];
+
+        $result = $this
+            ->startConditions()
+            ->select($column)
+            ->where('category_id', $id)
+            ->get();
+
+        return $result;
+    }
 }
