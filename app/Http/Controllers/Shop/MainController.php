@@ -22,17 +22,20 @@ class MainController extends BaseController
 
     public function index()
     {
+
         $hitProducts = $this->products_rep->hitProducts();
         $hitProductsHidden = $this->products_rep->hitProductsHidden();
-        $hitProductsContentBlock = view(env('THEME') . '.shop.main.hitProductsContentBlock',compact('hitProducts','hitProductsHidden'));
+        $categoryProduct = $this->searchRepository->getCategoryProduct($hitProducts);
+        $categoryProductHidden = $this->searchRepository->getCategoryProduct($hitProductsHidden);
+        $hitProductsContentBlock = view(env('THEME') . '.shop.main.hitProductsContentBlock', compact('hitProducts', 'hitProductsHidden', 'categoryProduct', 'categoryProductHidden'));
         $this->vars = Arr::add($this->vars, 'hitProductsContentBlock', $hitProductsContentBlock);
 
         $getCategories = $this->category_rep->getCategories();
-        $categoriesContentBlock = view(env('THEME') . '.shop.main.categoriesContentBlock',compact('getCategories'));
+        $categoriesContentBlock = view(env('THEME') . '.shop.main.categoriesContentBlock', compact('getCategories'));
         $this->vars = Arr::add($this->vars, 'categoriesContentBlock', $categoriesContentBlock);
 
         $getSlide = $this->slider_rep->getSlide();
-        $slidersContentBlock = view(env('THEME') . '.shop.main.slidersContentBlock',compact('getSlide'));
+        $slidersContentBlock = view(env('THEME') . '.shop.main.slidersContentBlock', compact('getSlide'));
         $this->vars = Arr::add($this->vars, 'slidersContentBlock', $slidersContentBlock);
 
         $feedbackContentBlock = view(env('THEME') . '.shop.main.feedbackContentBlock');
@@ -44,7 +47,7 @@ class MainController extends BaseController
 
     /**
      * Отправка формы..
-     * @param  SendContactsRequest $request
+     * @param SendContactsRequest $request
      */
     public function store(SendContactsRequest $request)
     {
@@ -65,7 +68,7 @@ class MainController extends BaseController
 
     /**
      * Отправка формы header ('Вам перезвонить?')..
-     * @param  SendCallBackRequest $request
+     * @param SendCallBackRequest $request
      */
     public function callback(SendCallBackRequest $request)
     {

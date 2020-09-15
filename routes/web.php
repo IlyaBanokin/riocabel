@@ -29,8 +29,9 @@ Route::group(['namespace' => 'Shop'], function () {
         ->only($methodsCategories)
         ->names('shop.categories');
 
-    //Route::get('/catalog/{alias}', ['uses' => 'CategoriesController@show', 'as' => 'product.info'])
+
     Route::post('/callback', ['uses' => 'MainController@callback', 'as' => 'shop.main.callback']);
     Route::get('/search/result', ['uses' => 'SearchController@index', 'as' => 'search.result']);
     Route::get('/autocomplete', ['uses' => 'SearchController@search', 'as' => 'products.search']);
+    Route::get('/{catalog}/{slug}', ['uses' => 'ProductsController@show', 'as' => 'product.info']);
 });

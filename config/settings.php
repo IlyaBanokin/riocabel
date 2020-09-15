@@ -1,5 +1,6 @@
 <?php
 return [
-    'searchPaginate' => 16,
+    'searchPaginate' => 50,
     'emailContacts' => 'info@riokabel.ru',
+    'paginateProducts' => 60,
 ];

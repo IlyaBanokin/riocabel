@@ -43,10 +43,25 @@ class CategoryRepository extends CoreRepository
 
     public function getCategory($slug)
     {
+        $column = ['id','excerpt'];
+
         $result = $this
             ->startConditions()
-            ->select('id','excerpt')
+            ->select($column)
             ->where('slug', $slug)
+            ->first();
+
+        return $result;
+    }
+
+    public function getCategoryProduct($category_id)
+    {
+        $column = ['id', 'title', 'slug'];
+
+        $result = $this
+            ->startConditions()
+            ->select($column)
+            ->where('id', $category_id)
             ->first();
 
         return $result;

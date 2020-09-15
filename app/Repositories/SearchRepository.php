@@ -20,13 +20,28 @@ class SearchRepository extends CoreRepository
 
     public function getProductsSearch($query, $perPage = null)
     {
-        $column = ['id', 'title', 'slug', 'img'];
-        $products = $this->startConditions()
+        $column = ['id', 'title', 'slug', 'img', 'category_id'];
+        $products = DB::table('products')
             ->select($column)
             ->where('title', 'LIKE', '%' . $query . '%')
             ->paginate($perPage);
 
         return $products;
+    }
+
+    public function getCategoryProduct($data)
+    {
+        foreach ($data as $product){
+            $catId = $product->category_id;
+        }
+
+        $column = ['slug'];
+        $category = DB::table('categories')
+            ->select($column)
+            ->where('id', $catId)
+            ->get();
+
+        return $category;
     }
 
     public function getAjaxSearch($search)

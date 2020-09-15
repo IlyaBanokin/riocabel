@@ -62,5 +62,6 @@
 <script src="/js/menu.js"></script>
 <script src="/js/typeahead.bundle.js"></script>
 <script src="/js/main.js"></script>
+<script src="/js/validator.js"></script>
 </body>
 </html>

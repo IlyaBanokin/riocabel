@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Repositories\CategoryRepository;
 use App\Repositories\MenuRepository;
 use App\Repositories\ProductRepository;
+use App\Repositories\SearchRepository;
 use App\Repositories\SliderRepository;
 use Illuminate\Http\Request;
 use Illuminate\Support\Arr;
@@ -64,6 +65,7 @@ abstract class BaseController extends Controller
         $this->category_rep = app(CategoryRepository::class);
         $this->products_rep = app(ProductRepository::class);
         $this->slider_rep = app(SliderRepository::class);
+        $this->searchRepository = app(SearchRepository::class);
     }
 
     /**

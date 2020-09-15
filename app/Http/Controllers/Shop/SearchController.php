@@ -19,6 +19,8 @@ class SearchController extends BaseController
 
     /**
      * Показ результата поиска.
+     * @param Request $request
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function index(Request $request)
     {
@@ -26,7 +28,9 @@ class SearchController extends BaseController
 
         $products = $this->searchRepository->getProductsSearch($query, Config::get('settings.searchPaginate'));
 
-        $content = view(env('THEME') . '.shop.search.result', compact('query', 'products'));
+        $categoryProduct = $this->searchRepository->getCategoryProduct($products);
+
+        $content = view(env('THEME') . '.shop.search.result', compact('query', 'products', 'categoryProduct'));
         $this->vars = Arr::add($this->vars, 'content', $content);
 
         return $this->renderOutput();

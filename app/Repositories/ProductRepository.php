@@ -24,7 +24,7 @@ class ProductRepository extends CoreRepository
      */
     public function hitProducts()
     {
-        $column = ['id', 'title', 'slug', 'img'];
+        $column = ['id', 'title', 'slug', 'img', 'category_id'];
         $result = $this->startConditions()
             ->select($column)
             ->where('hit', 1)
@@ -37,7 +37,7 @@ class ProductRepository extends CoreRepository
 
     public function hitProductsHidden()
     {
-        $column = ['id', 'title', 'slug', 'img'];
+        $column = ['id', 'title', 'slug', 'img', 'category_id'];
         $result = $this->startConditions()
             ->select($column)
             ->where('hit', 1)
@@ -47,7 +47,7 @@ class ProductRepository extends CoreRepository
         return $result;
     }
 
-    public function getProductsCategory($id)
+    public function getProductsCategory($id, $perPage = null)
     {
         $column = ['id', 'title', 'slug', 'category_id'];
 
@@ -55,7 +55,20 @@ class ProductRepository extends CoreRepository
             ->startConditions()
             ->select($column)
             ->where('category_id', $id)
-            ->get();
+            ->paginate($perPage);
+
+        return $result;
+    }
+
+    public function getProduct($slug)
+    {
+        $column = ['id', 'slug', 'title', 'category_id', 'content', 'keywords', 'description', 'img'];
+
+        $result = $this
+            ->startConditions()
+            ->select($column)
+            ->where('slug', $slug)
+            ->first();
 
         return $result;
     }
